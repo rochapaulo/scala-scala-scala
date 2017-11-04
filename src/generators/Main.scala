@@ -34,6 +34,15 @@ object Main extends App {
     val ys = listGenerator.generate
     println(ys)
 
+
+    integers.map(x => x > 0)
+
+    integers.flatMap((y: Int) => new Generator[Booleans] {
+      def generate: Boolean = y > 0
+    })
+
+
+
   }
 
 
